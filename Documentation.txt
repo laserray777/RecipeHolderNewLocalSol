@@ -1,0 +1,17 @@
+12-07-2017:
+[This is a local only RecipeHolderNewLocalSol solution, with
+the purpose of quickly copying the RecipeHolder project from
+F:\...\import of vs\...\RecipeHolder, and establishing a working
+Git configuration for the complete project, with all important
+files staged and committed and existing in the .git repository.
+I will then push this complete project to an appropriate VSTS
+remote and clone that remote repository on DESKTOP-RASK4QR.
+I will then be able to work on this project, anytime and anywhere
+I have an internet connection. There was an practically hopeless
+merge conflict on the regular RecipeHolder projects which
+prevented me from pushing them to a remote from which to clone.]
+12-07-2017:
+[Creation Steps: Visual C# > web > ASP.NET Web Application >
+New ASP.NET Web Application: ASP.NET 4.6.1 Templates: Web Forms,
+Add folders and core references for: [x]Web Forms] [x]MVC,
+no unit tests, no azure, Authentication: Individual User Account.

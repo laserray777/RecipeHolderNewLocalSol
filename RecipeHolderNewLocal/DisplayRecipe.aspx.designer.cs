@@ -10,24 +10,33 @@
 namespace RecipeHolderNewLocal {
     
     
-    public partial class SiteMaster {
+    public partial class DisplayRecipe {
         
         /// <summary>
-        /// head control.
+        /// tmplbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder head;
+        protected global::System.Web.UI.WebControls.Label tmplbl;
         
         /// <summary>
-        /// MainContent control.
+        /// btn_DisplayNote control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::System.Web.UI.WebControls.Button btn_DisplayNote;
+        
+        /// <summary>
+        /// txtB_DisplaySessionContent control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtB_DisplaySessionContent;
     }
 }

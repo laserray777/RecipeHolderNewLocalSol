@@ -10,24 +10,15 @@
 namespace RecipeHolderNewLocal {
     
     
-    public partial class SiteMaster {
+    public partial class EnterRecipe {
         
         /// <summary>
-        /// head control.
+        /// txtB_InitialEnterNote control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder head;
-        
-        /// <summary>
-        /// MainContent control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::System.Web.UI.WebControls.TextBox txtB_InitialEnterNote;
     }
 }
