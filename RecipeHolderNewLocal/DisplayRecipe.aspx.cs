@@ -12,7 +12,7 @@ namespace RecipeHolderNewLocal
 		protected void Page_Load(object sender, EventArgs e)
 		{
 
-            tmplbl.Text = Session["Recipe1"].ToString();
+            
 		}
 
         // btn_DisplayNote_Click() displays the content of
@@ -21,6 +21,11 @@ namespace RecipeHolderNewLocal
         {
             txtB_DisplaySessionContent.Text =
                 Session["Recipe1"].ToString();
+        }
+
+        protected void btnSaveNote_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
