@@ -31,12 +31,18 @@
                 <div style="text-align:center;">
                  <asp:Label ID="Label1" runat="server" Text="Label" >Recipe or Note Name:</asp:Label> 
                  <br />
-                 <asp:TextBox ID="TextBox1" runat="server" Width="200">Enter Name</asp:TextBox>
+                 <asp:TextBox ID="txtB_RecipeName" runat="server" Width="200">Enter Name</asp:TextBox>
                 </div>
                 <br />
                 <div style="text-align:center;">
                  <asp:Button ID="btnSaveNote" runat="server" Text="Save Note"  
                        OnClick="btnSaveNote_Click" Width="150" />
+                </div>
+                <div style="text-align:center;">
+                    <asp:Label ID="Label2" runat="server" Text="Open Error Message:"></asp:Label>
+                    <asp:Label ID="lblOpenError" runat="server" Text="Open Succeeded!"></asp:Label>
+                    <asp:Label ID="Label3" runat="server" Text="Success?"></asp:Label>
+                    <asp:Label ID="lblSuccessWrite" runat="server" Text="Nothing Written Yet!"></asp:Label>
                 </div>
          
             </asp:TableCell>

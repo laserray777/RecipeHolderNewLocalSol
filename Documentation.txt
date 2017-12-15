@@ -15,3 +15,68 @@ prevented me from pushing them to a remote from which to clone.]
 New ASP.NET Web Application: ASP.NET 4.6.1 Templates: Web Forms,
 Add folders and core references for: [x]Web Forms] [x]MVC,
 no unit tests, no azure, Authentication: Individual User Account.
+]
+
+12-14-2017:
+[
+            // The code to insert the recipe into the 
+            // RecipeHolderNewLocalSol_db using regular ADO.NET
+            // is from the article on github: 
+            // "Using SQL Database
+            // fron .NET (C#)". by Tobias ternstrom 
+            // (https://github.com/tobbox).
+			I created a stored procedure using Sql Server Management
+			studio. The stored procedure was created in the
+			RecipeHolderNewLocalSol_db database in the azure sql
+			databae server - recipeserver. Here is the definition
+			of the sp_InsertRecipe stored procedure:
+
+			Create Proc [dbo].[sp_InsertRecipe]
+			(
+			  @RecipeName AS nvarchar(50) = NULL, // make optional 
+			  @RecipeSource AS nvarchar(50) = NULL, 
+			  @RecipeContents AS nvarchar(max) = Null, 
+			  @RecipeDate AS DATETIME = NULL
+			)
+			AS
+			BEGIN
+			 SET XACT_ABORT, NOCOUNT ON;
+			 INSERT INTO dbo.Recipes
+			 OUTPUT inserted.RecipeID
+			 VALUES (@RecipeName, @RecipeSource, @RecipeContents, @RecipeDate)
+			END;
+]
+12-15-2017 02:15:00 PM:
+[
+   At this time, i decided I wanted I wanted to prevent duplicates
+  from being introduced into the database - Recipes. I did this by
+  executing an ALTER TABLE command in Sql Server Management Studio.
+  I have this code stored in .sql file stored in ssms as:
+  SQLQuery_ALTER_ADDCONSTRAINT_UNIQUE.sql.
+  Here is the code for this file:
+  ALTER TABLE [dbo].[Recipes
+  ADD CONSTRAINT UQ_RecipeName UNIQUE (RecipeName).
+  I tested the application after executing this sql query and INDEED,
+  the application would not enter duplicate recipe entries.
+  AT this point, I believe I have all the necessary code implemented
+  in the application to pass the acceptance criteria for
+  sprint 1. I am now going to stage all these changes, and commit
+  them. I am then going to create an annotated tag, called
+  'v1.2-a' for this resultant commit. I will then have this inform-
+  ation in a commit message and an annotated tag message. I am just
+  testing this functionality at this point. The outcome of this
+  test will determine what approach I want to incorporate into
+  my regular workflow.
+  Finally, for Sprint 1, I will merge the  committed changes into
+  the master branch and push the resultant merge commit to vsts.
+  I don't know yet if I want to delete the develop branch from the
+  local repository before I push to vsts. I think I will delete
+  the develop branch before pushing because I am new to git and I
+  want to keep things as sinple as possible.
+  NOTE: I will not execute 'git merge develop' (while I have master
+  'checked out) until 'git status' displays:
+  'Nothing to commit, Working Directory Clean'.
+  This scenario should only involve one fast-forward merge.
+  ]
+]
+
